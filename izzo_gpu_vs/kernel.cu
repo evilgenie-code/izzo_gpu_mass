@@ -14,12 +14,6 @@
 
 #include <time.h>
 
-const int sizeL = 500000 * 3;
-const int size = 500000;
-double R0[sizeL];
-double Rk[sizeL];
-double dt[size];
-
 using namespace std;
 
 double asinh(double x) { return log(x + sqrt(x * x + 1)); };
@@ -359,6 +353,7 @@ int main() {
     double** DATA = NULL;
     int i, k, SIZE1, SIZE2 = 29;
     char boof[2][1000];
+    double R0[3] = { 0.0,0.0,0.0 };
 
     printf("2. reading file \n");
 
