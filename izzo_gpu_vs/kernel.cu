@@ -281,8 +281,7 @@ double** reading_data(char* name_file, double** DATA, char ADD[][1000], int igno
 
     char line[1000], * tok, * next_token = NULL;
 
-    for (int k = 0; k < 10; k++)
-    {
+    
         ifstream file(name_file);
         while (file.getline(line, 1000) && ignore) {
             ignore--;
@@ -307,7 +306,7 @@ double** reading_data(char* name_file, double** DATA, char ADD[][1000], int igno
 
         } while (file.getline(line, 1000));
         file.close();
-    }
+    
 
     return DATA;
 }
